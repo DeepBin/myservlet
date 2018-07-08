@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <servlet>
+    <!--servlet名称，可以自定义-->
+    <servlet-name>MyServlet</servlet-name>
+    <!-- servlet类名： 包名+简单类名-->
+    <servlet-class>myservlet.MyServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <!--servlet名称，应与上面的名称保持一致，因为是通过下面的servlet访问名称来定位到上面的servlet名称，再通过上面的名称定位到servlet类的位置-->
+    <servlet-name>MyServlet</servlet-name>
+    <!-- servlet的访问名称： /名称 -->
+    <url-pattern>/helloMyServlet.do</url-pattern>
+  </servlet-mapping>
+</web-app>
